@@ -5,7 +5,57 @@
   box-sizing: border-box;
   font-family: "Alkatra", cursive;
 }
+body {
+  background: #e6e6ea;
+}
 
+.container {
+  padding: 20px;
+  overflow: hidden;
+  background: #fe4a49;
+  display: flex;
+  justify-content: space-around;
+}
+.container h1 {
+  margin-left: 10%;
+  color: #fff;
+}
+.container ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 20px;
+  margin-left: 60%;
+}
+.container li {
+  margin-top: 10px;
+  padding: 0 20px 0 20px;
+}
+.container a {
+  text-decoration: none;
+  color: #fff;
+}
+.current a::after {
+  content: "_";
+  background: #fff;
+  font-size: 4px;
+  display: block;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 82% 18%;
+}
+.equation {
+  font-size: 65px;
+  background: #fff;
+  border-radius: 3px;
+  text-align: center;
+  padding-top: 15%;
+  margin: 10px 10px 0 10px;
+}
+.equation h1 {
+  display: inline;
+  padding: 20px;
+}
 .num1 {
   color: #fe4a49;
 }
@@ -22,4 +72,43 @@
 }
 .equation h1:nth-child(5n) {
   color: #808080;
+}
+
+.answer-option {
+  font-size: 67px;
+  margin-right: 10px;
+}
+.answer-option h1 {
+  cursor: pointer;
+  color: whitesmoke;
+  border-radius: 3px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+.option1 {
+  background: #fe4a49;
+  transition: 1s;
+}
+.option1:hover {
+  color: #fe4a49;
+  background: #fff;
+}
+
+.option2 {
+  background: #2ab7ca;
+  transition: 1s;
+}
+.option2:hover {
+  color: #2ab7ca;
+  background: #fff;
+}
+
+.option3 {
+  background: #fed766;
+  transition: 1s;
+}
+.option3:hover {
+  color: #fed766;
+  background: #fff;
 }
