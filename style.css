@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alkatra", cursive;
+}
+
+.num1 {
+  color: #fe4a49;
+}
+.num2 {
+  color: #fed766;
+}
+
+.equation h1:nth-child(2) {
+  color: #2ab7ca;
+}
+
+.equation h1:nth-child(4) {
+  color: #3700ff;
+}
+.equation h1:nth-child(5n) {
+  color: #808080;
+}
