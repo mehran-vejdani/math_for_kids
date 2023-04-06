@@ -14,14 +14,22 @@ function generate_equation() {
   let dummyAnswer1 = Math.floor(Math.random() * 13);
   let dummyAnswer2 = Math.floor(Math.random() * 13);
 
-  let addAnswer = [];
+  let allAnswer = [];
+  let switchAnswer = [];
   answer = num1 + num2;
   number1.innerHTML = num1;
   number2.innerHTML = num2;
 
-  option1.innerHTML = answer;
-  option2.innerHTML = dummyAnswer1;
-  option3.innerHTML = dummyAnswer2;
+  allAnswer = [answer, dummyAnswer1, dummyAnswer2];
+  for (let i = allAnswer.length; i--; ) {
+    switchAnswer.push(
+      allAnswer.splice(Math.floor(Math.random() * (i + 1)), 1)[0]
+    );
+  }
+
+  option1.innerHTML = switchAnswer[0];
+  option2.innerHTML = switchAnswer[1];
+  option3.innerHTML = switchAnswer[2];
 }
 
 option1.addEventListener("click", () => {
@@ -45,3 +53,5 @@ option3.addEventListener("click", () => {
     WrongAudio.play();
   }
 });
+
+generate_equation();
